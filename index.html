@@ -28,14 +28,14 @@
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="project-name">Project Name</label>
-        <input type="text" class="form-control" id="project-name" required>
+        <input type="text" class="form-control" id="project-name-input" required>
       </div>
       <div class="col-md-6 mb-3">
         <label for="project-type">Project Type</label>
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Pick One
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="project-type-input" data-bs-toggle="dropdown" aria-expanded="false">Pick One
             
           </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <ul class="dropdown-menu" aria-labelledby="project-type-input">
             <li><a class="dropdown-item" href="#">Web Application (Front End)</a></li>
             <li><a class="dropdown-item" href="#">Web Application (Back End)</a></li>
             <li><a class="dropdown-item" href="#">Web Application (Full Stack)</a></li>
@@ -47,17 +47,17 @@
     <div class="form-row">
       <div class="col-md-3 mb-3">
         <label for="due-date">Due Date</label>
-        <select class="custom-select" id="due-date" required>
+        <select class="custom-select" id="due-date-input" required>
           <option selected disabled value="">Choose...</option>
           <option></option>
         </select>
       </div>
       <div class="col-md-3 mb-3">
         <label for="hourly-rate">Hourly Rate</label>
-        <input type="text" class="form-control" id="hourly-rate" required>
+        <input type="text" class="form-control" id="hourly-rate-input" required>
       </div>
     </div>
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-primary" type="submit" id="submit-button">Submit form</button>
   </form>
 
   <div class="modal-print col-12 col-md-8 col-lg-6">

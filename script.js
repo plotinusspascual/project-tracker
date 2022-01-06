@@ -1,6 +1,12 @@
-
-//var currentTime = moment();
-// $('#current-time').text(moment().format("L LT"));
+var projectName = $("#project-name");
+var projectType = $("project-type");
+var dueDate = $("due-date");
+var hourlyRate = $("hourly-rate");
+var projectNameInput = $("#project-name-input");
+var projectTypeInput = $("project-type-input");
+var dueDateInput = $("due-date-input");
+var hourlyRateInput = $("hourly-rate-input");
+var submitButton = $("submit-button");
 
 var currentTime = function(){
   document.getElementById("current-time").innerHTML =
@@ -23,18 +29,19 @@ function postProject(event) {
   event.preventDefault();
   // get items by id for values pairs
   var newProject = {
-    projectName: projectName,
-    projectType: projectType,
-    dueDate: dueDate,
-    hourlyRate: hourlyRate,
+    projectName: projectNameInput.value,
+    projectType: projectTypeInput.value,
+    dueDate: dueDateInput.value,
+    hourlyRate: hourlyRateInput.value,
   }
+  console.log(newProject);
 
 
-  var storedProject = getProjects();
+  var storedProjects = getProjects();
   storedProjects.unshift(newProject);
   localStorage.setItem("projects", JSON.stringify(storedProjects));
   renderProjects();
 }
 
 //add event listener for submit button
-submitButton.addEventListener("submit", postProjects);
+submitButton.on("submit", postProject);
