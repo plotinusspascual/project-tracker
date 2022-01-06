@@ -24,7 +24,39 @@
 
 <body>
   <!---this will be our left column that asks for user input 1/3of page-->
-<div class="modal"></div>
+  <form>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="project-name">Project Name</label>
+        <input type="text" class="form-control" id="project-name" required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="project-type">Project Type</label>
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>     
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-3 mb-3">
+        <label for="due-date">Due Date</label>
+        <select class="custom-select" id="due-date" required>
+          <option selected disabled value="">Choose...</option>
+          <option></option>
+        </select>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="hourly-rate">Hourly Rate</label>
+        <input type="text" class="form-control" id="hourly-rate" required>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
   <!---this will be our right column that prints user input 2/3 of page-->
 <div class="modal-print"></div>
 </body>
